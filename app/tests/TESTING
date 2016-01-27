@@ -1,0 +1,174 @@
+################################################################################
+#                                                                              #
+#                      Function/method testing status                          #
+#                                                                              #
+################################################################################
+
+    Tracks
+================================================================================
+    - add_track()                   [OK]
+    - edit_track()                  [OK]
+    - delete_track()                [OK]
+    - get_currently_playing()       [OK]
+    - get_most_popular()            [OK]
+    - get_tracks()                  [OK]
+    - search_tracks()               [OK]
+
+
+    User
+================================================================================
+    - authenticate_user()           [OK]
+    - create_user()                 [OK]
+    - delete_user()                 [OK]
+    - activate_user()               [OK]
+    - list_active_admins()          [OK]
+    - count_active_users()          [OK]
+    - search_basic_users()          [OK]
+    - change_password()             [OK]
+    - modify_account()              [OK]
+    - delete_account()              [OK]
+    - update_activity()             [OK]
+    - _authenticate()               [OK]
+    - _assert_admin()               [OK]
+    - _assert_editor()              [OK]
+    - _assert_owner()               [OK]
+    - _assert_user()                [OK]
+    - get_all_users()               [OK]
+    - get_user()                    [OK]
+    - modify_user_account()         [OK]
+    - delete_user_account()         [OK]
+    - get_all_editors()             [OK]
+    - add_editor()                  [OK]
+    - remove_editor()               [OK]
+    - get_requests()                [OK]
+    - get_all_requests()            [OK]
+    - allow_request()               [OK]
+    - deny_request()                [OK]
+    - modify_station_data()         [OK]
+    - get_all_admins()              [OK]
+    - add_admin()                   [OK]
+    - remove_admin()                [OK]
+    - add_track()                   [OK]
+    - edit_track()                  [OK]
+    - remove_track()                [OK]
+    - get_all_slots()               [OK]
+    - get_slots()                   [OK]
+    - request_slot()                [OK]
+    - get_slot_playlist()           [OK]
+    - set_slot_playlist()           [OK]
+    - get_all_tracks()              [OK]
+    - search_tracks()               [OK]
+    - get_wishlist()                [OK]
+    - set_wishlist()                [OK]
+    - confirm_wishlist()            [OK]
+    - get_global_wishlist()         [OK]
+    - get_active_users_count_stat() [OK]
+    - get_active_admins_list_stat() [OK]
+    - get_editor_preferred_tracks_stat()    [OK]
+    - search_users()                [OK]
+
+
+    Slot
+================================================================================
+    - get_slots()                   [OK]
+    - get_playlist()                [OK]
+    - set_playlist()                [OK]
+
+
+    SlotRequest
+================================================================================
+    - make_request()                [OK]
+    - allow()                       [OK]
+    - deny()                        [OK]
+
+
+    PlaylistTrack
+================================================================================
+    - get_editor_preferred_tracks() [OK]
+
+
+    Wish
+================================================================================
+    - get_user_wishlist()           [OK]
+    - set_user_wishlist()           [OK]
+    - confirm_user_wishlist()       [OK]
+    - get_global_wishlist()         [OK]
+
+
+    RadioStation
+================================================================================
+    - modify_station_data()         [OK]
+
+
+################################################################################
+################################################################################
+################################################################################
+
+
+
+    Views
+================================================================================
+    - /                             [NOT IMPLEMENTED]
+
+    - /player/get                   [OK]
+    - /player/info                  [OK]
+    - /player/schedule              [OK]
+
+    - /user/auth/login              [OK]
+    - /user/auth/register           [OK]
+    - /user/auth/activate           [OK]
+    - /user/auth/signout            [OK]
+
+    - /user/account/type            [OK]
+    - /user/account/get             [OK]
+    - /user/account/modify          [OK]
+    - /user/account/delete          [OK]
+    - /user/account/change_password [OK]
+
+    - /user/wishlist/get            [OK]
+    - /user/wishlist/set            [OK]
+    - /user/wishlist/confirm        [OK]
+
+    - /admin/tracks/add             []      (untested, could not simulate file upload)
+    - /admin/tracks/<id>/get        [OK]
+    - /admin/tracks/<id>/edit       [OK]
+    - /admin/tracks/<id>/delete     [OK]
+
+    - /admin/editors/list           [OK]
+    - /admin/editors/add/<id>       [OK]
+    - /admin/editors/<id>/remove    [OK]
+
+    - /admin/requests/list          [OK]
+    - /admin/requests/<id>/allow    [OK]
+    - /admin/requests/<id>/deny     [OK]
+
+    - /admin/users/list             [OK]
+    - /admin/users/<id>/get         [OK]
+    - /admin/users/<id>/modify      [OK]
+    - /admin/users/<id>/delete      [OK]
+
+    - /editor/slots/list            [OK]
+    - /editor/slots/request         [OK]
+    - /editor/slots/<id>/get_list   [OK]
+    - /editor/slots/<id>/set_list   [OK]
+
+    - /owner/admins/list            [OK]
+    - /owner/admins/add/<id>        [OK]
+    - /owner/admins/<id>/remove     [OK]
+
+    - /owner/station/modify         [OK]
+
+    - /tracks/list                  [OK]
+    - /tracks/search                [OK]
+    - /tracks/wishlist              [OK]
+    - /tracks/popular               [OK]
+
+    - /users/search                 [OK]
+
+    - /stats/tracks/<id>/play_count [OK]
+    - /stats/tracks/wishlist        [OK]
+    - /stats/tracks/most_wished     [OK]
+    - /stats/tracks/most_wished/wish_count/<start>/<end>    [OK]
+    - /stats/editors/<id>/preferred_tracks                  [OK]
+    - /stats/active_users/count     [OK]
+    - /stats/active_admins/list     [OK]
