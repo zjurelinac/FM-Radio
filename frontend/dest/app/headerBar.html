@@ -1,0 +1,20 @@
+
+<header>
+  <div [ngClass]="{unfixed : !isFixed, &quot;logged-in&quot; : isLoggedIn, &quot;not-logged-in&quot; : !isLoggedIn}" class="header-bar">
+    <div class="app-box row"><a>
+        <div class="app-name"><img src="/dest/static/img/logo.png" alt="FM Radio"/></div></a></div>
+    <div class="user-box row">
+      <div class="user-form-box">
+        <form [ngFormModel]="loginForm.group" (ngSubmit)="loginForm.onSubmit(loginForm.group.value)" class="row">
+          <input type="email" id="email" placeholder="E-mail" [ngFormControl]="loginForm.group.controls['email']"/>
+          <input type="password" id="password" placeholder="Lozinka" [ngFormControl]="loginForm.group.controls['password']"/>
+          <button type="submit">Prijavi se</button>
+          <button type="button" class="dim">Registriraj se</button>
+        </form>
+      </div>
+      <div class="user-name-box"><i class="material-icons user-icon">account_circle</i>
+        <div class="user-name">Mirko Horvat<span class="user-type">administrator</span></div>
+      </div>
+    </div>
+  </div>
+</header>
